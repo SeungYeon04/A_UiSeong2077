@@ -1,92 +1,46 @@
-# ⚔️ LLM 텍스트 어드벤처 웹게임 
-  
-**Us:Code 의성 청년 아카데미 메인 프로젝트 프론트엔드**  
-> 🪴 서브 프로젝트 URL: **https://github.com/SeungYeon04/A_3DFoodGame**
+# Getting Started with Create React App
 
-> ⚔️ 백엔드 URL: **https://github.com/scy0416/UiSeong2077**  
-  
-의성 Us:Code 청년 개발 아카데미  
-**의성 2077**팀으로 고운사를 바탕으로  
-불이 나 약해진 고운사를 공격하는  
-한국식 괴물들을 처치하는  
-LLM 텍스트 어드벤처 웹 게임입니다.  
-  
-메인 프로젝트로 AI를 활용하여  
-LLM 텍스트 어드벤처를  
-웹 게임으로 만들었습니다.  
-  
-> 🗓️ 2028-08-05 기준 / 미완성 상태 
-  
-## 🔗 프로젝트 링크
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-- url **(추후 추가 예정)**
-  
-## 🖥️ 프로젝트 소개
+## Available Scripts
 
-> #### 게임소개 
-> 장르: LLM 텍스트 어드벤처, 비주얼 노벨  
-> 간단스토리: 불에 타 힘이 약해진 고운사를 공격하는 괴물들을 몰아내는 수호하는 입장이 됨.  
->  
-> #### 목표
-> 의성의 고운사를 바탕으로 생존하며, 고운사를 수호하는 게임으로써    
-> 플레이어는 불을 지르고 고운사와 산을 공격하는 나쁜 괴물을 처지하고 지키는 게임을 하게 됩니다.
-> 게임을 플레이하며 자연스럽게 유저들이 의성에 대한 관심과 지킴으로써 애정을 가지고
-> 최근에 열린 고운사의 복원불사 모금 참여로 이어질 수 있도록 렌딩페이지와 게임 내에서
-> 의성으로 모금을 할 수 있도록 유도하기 위함.  
->  
-> #### 타겟층 
-> 1. 주요타겟층 (발표시 부타겟층으로 소개)
-> 서사 중심 인디 게임을 선호하는 20~30대  
-> 인터랙티브 픽션 팬층
->  
-> 2. 부타겟층  
-> 케이팝 데몬 헌터즈를 통해서 한류에 관심을 가지게 된 외국인  
->  
-> #### 인트로 
-> [유튜브 / 인트로 영상](https://youtu.be/F6VVrFvDHO8?si=qjOL8rTs-w2qLzpx)  
-> 
+In the project directory, you can run:
 
-  
-## ⚙️ 개발 환경
+### `npm start`
 
-| 항목             | 내용                               |
-|------------------|-----------------------------------|
-| 🧑‍💻 사용 언어     | React, tailwindcss, Type Script |
-| 🖋 개발 툴   | Visual Studio Code, windsurf, Cursor |
-| 📁 버전 관리      | GitHub Desktop & Git |
-| 🌐 호스팅         | 미정 |
-  
-## 🎮 주요 기능
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-- 게임을 시작해 튜토리얼 유무를 선택하고 게임진행
-- 스토리 진행하며 선택지를 고르고 체력 마나 등의 상호작용과 엔딩을 진행 
-  
-## 🖼️ 기획 단계 
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-- 1차 다이어그램  
+### `npm test`
 
-- 1차 공개문서 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- [1차 PPT](https://www.canva.com/design/DAGv1bjKoEE/1cvOaeUHFqiuHmhc0SfJ_g/view?utm_content=DAGv1bjKoEE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h560ef79879)  
-  
-## 🖼️ 플레이 화면 
+### `npm run build`
 
-> (스크린샷 또는 영상은 추후 추가 예정)
-  
-## 🌱 프로젝트 팀원
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-| 이름         | 역할    | GitHub                                          |
-|--------------|---------|------------------------------------------------|
-| 👨‍💻 송찬영     | Python 백엔드, AI연동 | (미입력)                          |
-| 👩‍💻 이승연     | 웹디자인, 인트로, 렌딩페이지 | [SeungYeon04](https://github.com/SeungYeon04) |
-| 👨‍💻 옥승현     | React 프론트, 웹소캣 | [SeungHyun](https://github.com/SeungHyunOK) |
-  
-## 📜 라이선스
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-본 프로젝트는 비상업적 용도로 자유롭게 사용하실 수 있으며,  
-2차 수정 및 배포 시 반드시 아래 출처를 명시해주세요.
+### `npm run eject`
 
-> **출처:** https://github.com/SeungYeon04/A_3DFoodGame  
-    
-※ **상업적 이용은 허용되지 않습니다.**
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
