@@ -2,7 +2,9 @@
 
 **LLM 텍스트 어드벤처 웹게임**  
 *의성 Us:Code 청년 아카데미 메인 프로젝트*
-
+  
+URL: https://a-ui-seong2077.vercel.app/  
+  
 [![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3-38B2AC.svg)](https://tailwindcss.com/)
