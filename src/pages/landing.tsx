@@ -8,7 +8,9 @@ export default function Landing() {
     "dark.png",
     "jang.png",
     "water.png",
-    "9miho.png"
+    "9miho.png",
+    "agost.png",
+    "tree.png"
   ];
 
 
@@ -80,6 +82,8 @@ export default function Landing() {
               </div>
             ))}
         </div>
+        <br/>
+        <h3 id="text" className="text-center text-gray-500 mb-6">(ai 사진입니다.)</h3>
         </div>
 
       </div>
