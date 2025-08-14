@@ -27,22 +27,17 @@ export default function Landing() {
             <p id="text" className="text-1xl mt-2 text-white">의성 고운사를 수호하라 비주얼노벨 LLM 텍스트 어드벤처</p>
           </div>
         </div>
-        {/* 이거 나중에 한옥 길게 실루엣 검정으로 만들기 */}
-        <img
-            src="../img/start.png" // ✅ 임시 이미지 경로
-            alt="Repairman Workshop"
-            className="w-full h-auto object-contain"
-          />
         
-      <div id="text" className="absolute bottom-56 left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4">
+      {/* 광고 3 박스 */}
+      <div id="text" className="ad-box absolute bottom-56 left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
           <div className="bg-black text-white p-6 rounded-lg shadow-lg">
             <h3 className="text-lg font-bold">Open AI를 활용</h3>
-            <p className="mt-2 font-bold text-yellow-400">AI LLM 기술을 사용하여<br/>여러가지 생존 상황을 연출</p>
+            <p className="mt-2 font-bold text-yellow-400">AI LLM 기술을 사용하여 여러가지 생존 상황을 연출</p>
           </div>
           <div className="bg-black text-white p-6 rounded-lg shadow-lg">
             <h3 className="text-lg font-bold">문화적 요소 겸비</h3>
-            <p className="mt-2"><span className="text-yellow-400 font-bold">의성 고운사</span>를 배경으로<br/>수호하는 스토리를 진행</p>
+            <p className="mt-2"><span className="text-yellow-400 font-bold">의성 고운사</span>를 배경으로 수호하는 스토리를 진행</p>
           </div>
           <div className="bg-black text-white p-6 rounded-lg shadow-lg">
             <h3 className="text-lg font-bold">비주얼 노벨 장르 겸비</h3>
@@ -50,6 +45,12 @@ export default function Landing() {
           </div>
         </div>
       </div>
+      {/* 이거 나중에 한옥 길게 실루엣 검정으로 만들기 */}
+        <img
+            src="../img/start.png" // ✅ 임시 이미지 경로
+            alt="Repairman Workshop"
+            className="w-full h-auto object-contain"
+          />
 
       </div>
 
@@ -61,7 +62,7 @@ export default function Landing() {
       {/* Workshop Scene */}
       <div className="bg-yellow-500 flex justify-center">
         <img
-          src="../img/image.png" // ✅ 임시 이미지
+          src="../img/phoneAll.png" // ✅ 임시 이미지
           alt="Workshop Scene"
           className="w-full max-w-[900px] aspect-[16/9] object-cover"
         />
@@ -70,7 +71,7 @@ export default function Landing() {
 
       {/* Grid Gallery */}
       <div className="bg-black py-10">
-        <h3 id="text" className="text-center text-yellow-500 mb-6">— 대표 등장인물 —</h3>
+        <h3 id="text" className="text-center text-yellow-500 mb-6">— 고운사를 위협하는 몬스터를 처치하세요. —</h3>
         <div className="grid grid-cols-4 gap-5 max-w-5xl mx-auto px-5">
             {monsterImages.map((fileName, idx) => (
               <div key={idx} className="overflow-hidden rounded-lg">

@@ -19,3 +19,11 @@
 #text {
     font-family: 'PFStardustS';
 }
+
+@media (max-width: 768px) {
+  .ad-box {
+    position: static; /* absolute 해제 */
+    transform: none;
+    margin-top: 1rem;
+  }
+}
