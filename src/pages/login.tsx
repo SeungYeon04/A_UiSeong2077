@@ -69,45 +69,77 @@ export default function Login() {
   };
 
   return (
-    <div
-      className={`flex flex-col justify-center items-center min-h-screen text-center px-4 transition-colors duration-200 ${
-        theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black'
-      }`}
-    >
+    <div className="min-h-screen bg-black font-sans text-white">
       {/* 테마 토글 버튼 */}
       <div className="absolute top-4 right-4 z-10">
         <ThemeToggle />
       </div>
 
-      <div className="max-w-4xl mx-auto w-full">
-        <p className="text-2xl sm:text-4xl md:text-6xl mb-5 px-4 leading-tight">
-          인공지능을 통해서 즐기는
-        </p>
-        <h1 className="text-4xl sm:text-6xl md:text-7xl text-[#6D00C1] mb-6 md:mb-10 px-4 font-bold">
-          TEXT ADVENTURE
-        </h1>
-
-        {/* 에러 메시지 */}
-        {error && (
-          <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg max-w-md mx-auto text-sm sm:text-base">
-            {error}
+      {/* Top Section */}
+      <div className="relative bg-yellow-500 text-black">
+        <div className="max-w-6xl mx-auto px-2 py-20 flex flex-col items-center">
+          <div className="text-center">
+            <h1 id="title" className="text-6xl font-extrabold text-white">
+              의성 2077: 고운사 수호자
+            </h1>
+            <h2 id="title" className="text-5xl font-extrabold text-yellow-950">
+              로그인
+            </h2>
+            <p id="text" className="text-1xl mt-2 text-white">
+              게임을 시작하려면 로그인해주세요
+            </p>
           </div>
-        )}
-
-        {/* 로딩 상태 */}
-        {isLoading && (
-          <div className="mb-6 flex items-center justify-center">
-            <div className="animate-spin rounded-full h-6 w-6 sm:h-8 sm:w-8 border-b-2 border-purple-600"></div>
-            <span className="ml-3 text-base sm:text-lg">로그인 중...</span>
-          </div>
-        )}
-
-        <div className="px-4">
-          <GoogleLogin
-            onSuccess={handleGoogleSuccess}
-            onError={handleGoogleError}
-          />
         </div>
+      </div>
+
+      {/* 로그인 섹션 */}
+      <div className="bg-black py-16">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <div className="bg-yellow-500 text-black p-12 rounded-2xl shadow-2xl max-w-2xl mx-auto">
+            <h3 id="title" className="text-3xl font-bold mb-8">
+              인공지능을 통해서 즐기는
+            </h3>
+            <h4 id="title" className="text-4xl font-bold text-yellow-950 mb-8">
+              TEXT ADVENTURE
+            </h4>
+
+            {/* 에러 메시지 */}
+            {error && (
+              <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg max-w-md mx-auto text-sm">
+                {error}
+              </div>
+            )}
+
+            {/* 로딩 상태 */}
+            {isLoading && (
+              <div className="mb-6 flex items-center justify-center">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-black"></div>
+                <span className="ml-3 text-lg text-black">로그인 중...</span>
+              </div>
+            )}
+
+            <div className="mb-8">
+              <GoogleLogin
+                onSuccess={handleGoogleSuccess}
+                onError={handleGoogleError}
+              />
+            </div>
+
+            <p className="text-yellow-950 text-sm">
+              Google 계정으로 간편하게 로그인하세요
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 뒤로가기 버튼 */}
+      <div className="bg-black py-8 text-center">
+        <button
+          onClick={() => navigate('/')}
+          className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-full transition-colors border-2 border-gray-400"
+        >
+          ← 랜딩페이지로 돌아가기
+        </button>
       </div>
     </div>
   );

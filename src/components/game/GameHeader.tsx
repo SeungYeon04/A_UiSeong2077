@@ -35,15 +35,15 @@ const GameHeader: React.FC = () => {
       <div className="absolute top-2 right-2 sm:top-4 sm:right-4 flex space-x-1 sm:space-x-2 z-10">
         <button
           onClick={handleSave}
-          className="px-2 py-1 sm:px-4 sm:py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-xs sm:text-sm"
+          className="px-2 py-1 sm:px-4 sm:py-2 bg-yellow-500 text-black rounded-lg hover:bg-yellow-600 transition-colors text-xs sm:text-sm font-bold border-2 border-yellow-300"
         >
-          저장
+          💾 저장
         </button>
         <button
           onClick={handleMainMenu}
-          className="px-2 py-1 sm:px-4 sm:py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-xs sm:text-sm"
+          className="px-2 py-1 sm:px-4 sm:py-2 bg-black text-yellow-400 rounded-lg hover:bg-gray-800 transition-colors text-xs sm:text-sm font-bold border-2 border-yellow-400"
         >
-          메뉴
+          ⚙️ 메뉴
         </button>
       </div>
 
@@ -72,19 +72,19 @@ const GameHeader: React.FC = () => {
         <div className="space-y-4">
           <button
             onClick={handleSave}
-            className="w-full text-left p-3 hover:bg-gray-100 rounded-lg transition-colors"
+            className="w-full text-left p-3 hover:bg-yellow-100 rounded-lg transition-colors border-l-4 border-yellow-500 pl-4"
           >
             💾 게임 저장
           </button>
           <button
             onClick={handleQuitGame}
-            className="w-full text-left p-3 hover:bg-gray-100 rounded-lg transition-colors text-red-600"
+            className="w-full text-left p-3 hover:bg-red-100 rounded-lg transition-colors text-red-600 border-l-4 border-red-500 pl-4"
           >
             🚪 게임 종료
           </button>
           <button
             onClick={handleLogout}
-            className="w-full text-left p-3 hover:bg-gray-100 rounded-lg transition-colors text-red-600"
+            className="w-full text-left p-3 hover:bg-red-100 rounded-lg transition-colors text-red-600 border-l-4 border-red-500 pl-4"
           >
             🔓 로그아웃
           </button>
