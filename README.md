@@ -3,7 +3,8 @@
 **LLM 텍스트 어드벤처 웹게임**  
 *의성 Us:Code 청년 아카데미 메인 프로젝트*
   
-URL: https://a-ui-seong2077.vercel.app/  
+> ⚔️ 의성 2077: 고운사 수호자 프로젝트 URL: https://a-ui-seong2077.vercel.app/  
+> 🪴 서브 프로젝트 URL: https://uscode3dfood.netlify.app/  
   
 [![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
