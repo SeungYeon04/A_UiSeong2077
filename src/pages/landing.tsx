@@ -2,6 +2,16 @@ import React from "react";
 import '../css/landing.css';
 
 export default function Landing() {
+  const monsterImages = [
+    "age.png",
+    "catg.png",
+    "dark.png",
+    "jang.png",
+    "water.png",
+    "9miho.png"
+  ];
+
+
   return (
     <div className="min-h-screen bg-black font-sans text-white">
       <div className="bg-black py-5 text-center"></div>
@@ -55,18 +65,19 @@ export default function Landing() {
         />
       </div>
 
+
       {/* Grid Gallery */}
       <div className="bg-black py-10">
-        <h3 className="text-center text-yellow-500 mb-6">— 대표 등장인물 —</h3>
+        <h3 id="text" className="text-center text-yellow-500 mb-6">— 대표 등장인물 —</h3>
         <div className="grid grid-cols-4 gap-5 max-w-5xl mx-auto px-5">
-            {Array.from({ length: 6 }).map((_, idx) => (
-            <div key={idx} className="overflow-hidden rounded-lg">
+            {monsterImages.map((fileName, idx) => (
+              <div key={idx} className="overflow-hidden rounded-lg">
                 <img
-                src="../img/image.png" // ✅ 임시 이미지
-                alt={`Thumbnail ${idx + 1}`}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  src={`../img/monster/${fileName}`} // 폴더 경로 + 파일명
+                  alt={`Thumbnail ${idx + 1}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
-            </div>
+              </div>
             ))}
         </div>
         </div>
