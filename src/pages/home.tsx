@@ -124,7 +124,7 @@ export default function Home() {
       </div>
 
       {/* 서버 연결 상태 표시 */}
-      <div className="bg-black py-8 text-center">
+      <div id="text" className="bg-black py-8 text-center">
         <div
           className={`inline-block px-6 py-3 rounded-full text-lg font-medium ${
             serverHealth
@@ -143,19 +143,20 @@ export default function Home() {
             게임을 선택하세요
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div id="text" className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <button
               onClick={() => setIsModalOpen(true)}
               className="bg-black text-white p-8 rounded-2xl shadow-2xl hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 border-4 border-yellow-300"
             >
               <div className="text-center">
                 <div className="text-6xl mb-4">🎮</div>
-                <h3 className="text-2xl font-bold mb-2">새로 시작</h3>
-                <p className="text-yellow-300">새로운 모험을 시작합니다</p>
+                <h3 id="text" className="text-2xl font-bold mb-2">새로 시작</h3>
+                <p id="text" className="text-yellow-300">새로운 모험을 시작합니다</p>
               </div>
             </button>
             
             <button
+              id="text"
               onClick={() => {
                 if (hasSavedGame()) {
                   setIsContinueModalOpen(true);
@@ -167,8 +168,8 @@ export default function Home() {
             >
               <div className="text-center">
                 <div className="text-6xl mb-4">📚</div>
-                <h3 className="text-2xl font-bold mb-2">이어서 하기</h3>
-                <p className="text-yellow-300">저장된 게임을 불러옵니다</p>
+                <h3 id="text" className="text-2xl font-bold mb-2">이어서 하기</h3>
+                <p id="text" className="text-yellow-300">저장된 게임을 불러옵니다</p>
               </div>
             </button>
           </div>
@@ -176,7 +177,7 @@ export default function Home() {
       </div>
 
       {/* 로그아웃 버튼 */}
-      <div className="bg-black py-8 text-center">
+      <div id="text" className="bg-black py-8 text-center">
         <button
           onClick={() => {
             logout();
@@ -221,8 +222,8 @@ export default function Home() {
           },
         ]}
       >
-        <div className="text-center">
-          <p className="text-lg mb-4">
+        <div id="text" className="text-center">
+          <p className="text-lg mb-4 text-gray-600">
             새로운 모험을 시작하면 이전 진행 상황이 초기화됩니다.
           </p>
           <p className="text-gray-600">
@@ -264,7 +265,7 @@ export default function Home() {
           },
         ]}
       >
-        <div className="text-center">
+        <div id="text" className="text-center">
           <p className="text-lg mb-4">
             저장된 게임을 불러와서 이전 진행 상황을 계속합니다.
           </p>

@@ -6,7 +6,7 @@ const Inventory: React.FC = () => {
 
   return (
     <div className="mb-auto">
-      <h4 className="text-sm font-medium text-gray-700 mb-3">인벤토리</h4>
+      <h4 className="text-sm font-medium text-white mb-3">인벤토리</h4>
       <div className="space-y-2">
         {items.length > 0 ? (
           items.map((item, index) => (

@@ -7,7 +7,7 @@ interface PlayerInfoProps {
 const PlayerInfo: React.FC<PlayerInfoProps> = ({ playerName }) => {
   return (
     <div className="mb-6">
-      <h3 className="text-lg font-semibold text-gray-800">
+      <h3 className="text-lg font-semibold text-white">
         플레이어: {playerName}
       </h3>
     </div>
