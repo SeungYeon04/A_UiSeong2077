@@ -6,6 +6,7 @@ import App from './App';
 import Login from './pages/login';
 import Game from './pages/game';
 import Home from './pages/home';
+import Landing from './pages/landing';
 import AuthCheck from './components/AuthCheck';
 
 const root = ReactDOM.createRoot(
@@ -30,6 +31,14 @@ root.render(
           element={
             <AuthCheck>
               <Game />
+            </AuthCheck>
+          }
+        />
+        <Route
+          path="/landing"
+          element={
+            <AuthCheck>
+              <Landing />
             </AuthCheck>
           }
         />

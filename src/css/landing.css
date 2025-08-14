@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Cafe24PROUP';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2507-1@1.0/Cafe24PROUP.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#title {
+    font-family: 'Cafe24PROUP';
+}
+
+@font-face {
+    font-family: 'PFStardustS';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2506-1@1.0/PFStardustS.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+#text {
+    font-family: 'PFStardustS';
+}
