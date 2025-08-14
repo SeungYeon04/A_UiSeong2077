@@ -17,7 +17,8 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route index element={<Login />} />
+        <Route index element={<Landing />} />
+        <Route path="/login" element={<Login />} />
         <Route
           path="/home"
           element={
@@ -34,14 +35,7 @@ root.render(
             </AuthCheck>
           }
         />
-        <Route
-          path="/landing"
-          element={
-            <AuthCheck>
-              <Landing />
-            </AuthCheck>
-          }
-        />
+        <Route path="/landing" element={<Landing />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
