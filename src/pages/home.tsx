@@ -105,66 +105,87 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen">
-      {/* 로그아웃 버튼 */}
-      <div className="absolute top-4 right-4 z-10">
-        <button
-          onClick={() => {
-            logout();
-            navigate('/');
-          }}
-          className="px-3 py-2 sm:px-4 sm:py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm sm:text-base"
-        >
-          로그아웃
-        </button>
+    <div className="min-h-screen bg-black font-sans text-white">
+      {/* Top Section */}
+      <div className="relative bg-yellow-500 text-black">
+        <div className="max-w-6xl mx-auto px-2 py-20 flex flex-col items-center">
+          <div className="text-center">
+            <h1 id="title" className="text-6xl font-extrabold text-white">
+              의성 2077: 고운사 수호자
+            </h1>
+            <h2 id="title" className="text-5xl font-extrabold text-yellow-950">
+              모험의 시작
+            </h2>
+            <p id="text" className="text-1xl mt-2 text-white">
+              {getUserName()}님, 고운사를 수호하는 모험을 떠나보세요!
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* 서버 연결 상태 표시 */}
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
+      <div className="bg-black py-8 text-center">
         <div
-          className={`px-3 py-2 rounded-lg text-sm font-medium ${
+          className={`inline-block px-6 py-3 rounded-full text-lg font-medium ${
             serverHealth
-              ? 'bg-green-100 text-green-800 border border-green-300'
-              : 'bg-red-100 text-red-800 border border-red-300'
+              ? 'bg-green-500 text-white border-2 border-green-300'
+              : 'bg-red-500 text-white border-2 border-red-300'
           }`}
         >
           {serverHealth ? '🟢 백엔드 연결됨' : '🔴 백엔드 연결 안됨'}
         </div>
       </div>
 
-      <h1 className="text-2xl sm:text-3xl md:text-4xl absolute top-4 left-4 font-bold">
-        TEXT ADVENTURE
-      </h1>
-
-      <div className="flex flex-col items-center justify-center min-h-screen px-4">
-        <h2 className="text-3xl sm:text-5xl md:text-7xl mb-8 md:mb-14 text-center leading-tight">
-          모험을 떠나보아요{' '}
-          <span className="text-4xl sm:text-6xl md:text-8xl text-purple-500 block sm:inline">
-            {getUserName()}
-          </span>
-          님!
-        </h2>
-
-        <div className="space-y-4 sm:space-y-6 md:space-y-8 w-full max-w-md">
-          <button
-            onClick={() => setIsModalOpen(true)}
-            className="w-full sm:min-w-96 shadow-lg rounded-full flex text-xl sm:text-3xl md:text-4xl items-center justify-center py-3 px-6 border border-gray-400 bg-white hover:bg-gray-50 transition-all duration-200"
-          >
-            새로시작
-          </button>
-          <button
-            onClick={() => {
-              if (hasSavedGame()) {
-                setIsContinueModalOpen(true);
-              } else {
-                alert('저장된 게임이 없습니다.');
-              }
-            }}
-            className="w-full sm:min-w-96 shadow-lg rounded-full flex text-xl sm:text-3xl md:text-4xl items-center justify-center py-3 px-6 border border-gray-400 bg-white hover:bg-gray-50 transition-all duration-200"
-          >
-            이어서 하기
-          </button>
+      {/* 게임 선택 섹션 */}
+      <div className="bg-yellow-500 py-16">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 id="title" className="text-4xl font-bold text-black text-center mb-12">
+            게임을 선택하세요
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="bg-black text-white p-8 rounded-2xl shadow-2xl hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 border-4 border-yellow-300"
+            >
+              <div className="text-center">
+                <div className="text-6xl mb-4">🎮</div>
+                <h3 className="text-2xl font-bold mb-2">새로 시작</h3>
+                <p className="text-yellow-300">새로운 모험을 시작합니다</p>
+              </div>
+            </button>
+            
+            <button
+              onClick={() => {
+                if (hasSavedGame()) {
+                  setIsContinueModalOpen(true);
+                } else {
+                  alert('저장된 게임이 없습니다.');
+                }
+              }}
+              className="bg-black text-white p-8 rounded-2xl shadow-2xl hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 border-4 border-yellow-300"
+            >
+              <div className="text-center">
+                <div className="text-6xl mb-4">📚</div>
+                <h3 className="text-2xl font-bold mb-2">이어서 하기</h3>
+                <p className="text-yellow-300">저장된 게임을 불러옵니다</p>
+              </div>
+            </button>
+          </div>
         </div>
+      </div>
+
+      {/* 로그아웃 버튼 */}
+      <div className="bg-black py-8 text-center">
+        <button
+          onClick={() => {
+            logout();
+            navigate('/');
+          }}
+          className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition-colors border-2 border-red-400"
+        >
+          로그아웃
+        </button>
       </div>
 
       {/* 새 게임 시작 모달 */}
