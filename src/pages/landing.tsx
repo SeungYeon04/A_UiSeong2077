@@ -118,12 +118,13 @@ export default function Landing() {
         {/* 게임 시작하기 버튼 */}
         <div className="text-center py-16">
           <button
+            id="text"
             onClick={handleGameStart}
-            className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-6 px-12 rounded-full text-2xl shadow-lg transform hover:scale-105 transition-all duration-300 border-4 border-yellow-300"
+            className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-6 px-12 rounded-full text-2xl shadow-lg transform hover:scale-105 transition-all duration-300 border-4 border-yellow-600"
           >
             🎮 게임 시작하기 🎮
           </button>
-          <p className="text-gray-400 mt-4 text-lg">
+          <p id="text" className="text-gray-400 mt-4 text-lg">
             버튼을 클릭하여 게임을 시작하세요!
           </p>
         </div>

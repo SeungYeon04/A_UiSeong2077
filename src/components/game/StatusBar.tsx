@@ -40,10 +40,10 @@ const StatusBar: React.FC<StatusBarProps> = ({ type, value, maxValue }) => {
   };
 
   return (
-    <div className="flex items-center mb-3">
+    <div className="flex items-center mb-3 text-white" >
       <div className="flex items-center mr-3">
         {getIcon()}
-        <span className="ml-2 text-sm font-medium text-gray-700">
+        <span className="ml-2 text-sm font-medium">
           {getLabel()}
         </span>
       </div>

@@ -5,7 +5,7 @@ import GameChoices from './GameChoices';
 
 const GameDialog: React.FC = () => {
   return (
-    <div className="flex-1 flex flex-col p-3 sm:p-4 md:p-6 overflow-hidden">
+    <div id="text" className="flex-1 flex flex-col p-3 sm:p-4 md:p-6 overflow-hidden">
       {/* 서사/상황 설명 */}
       <GameNarrative />
 
