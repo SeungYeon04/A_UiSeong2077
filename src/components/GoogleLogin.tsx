@@ -14,10 +14,16 @@ interface GoogleLoginProps {
 const GoogleLogin: React.FC<GoogleLoginProps> = ({ onSuccess, onError }) => {
   useEffect(() => {
     // Google Identity Services 초기화
+    if (!process.env.REACT_APP_GOOGLE_CLIENT_ID) {
+      console.error(
+        'Google Client ID가 설정되지 않았습니다. .env 파일을 확인해주세요.'
+      );
+      return;
+    }
+
     if (window.google) {
       window.google.accounts.id.initialize({
-        client_id:
-          '578368786163-tu63h13aklp2lbrmdpud1mjo3ah5i7ov.apps.googleusercontent.com',
+        client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
         callback: (response: any) => {
           if (onSuccess) {
             onSuccess(response);
