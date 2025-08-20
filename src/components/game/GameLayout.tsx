@@ -2,7 +2,6 @@ import React from 'react';
 import GameDialog from './GameDialog';
 import GameStatus from './GameStatus';
 import GameHeader from './GameHeader';
-import ConnectionStatus from './ConnectionStatus';
 
 interface GameLayoutProps {
   children?: React.ReactNode;
@@ -13,9 +12,6 @@ const GameLayout: React.FC<GameLayoutProps> = ({ children }) => {
     <div className="relative flex flex-col lg:flex-row h-screen bg-black">
       {/* 게임 헤더 */}
       <GameHeader />
-
-      {/* 연결 상태 표시 */}
-      <ConnectionStatus />
 
       {/* 왼쪽 패널 - 대화 및 상호작용 영역 */}
       <div className="flex-1 flex flex-col min-h-0 bg-gradient-to-br from-yellow-500 to-yellow-600">

@@ -7,14 +7,7 @@ import Modal from '../components/Modal';
 export default function Home() {
   const navigate = useNavigate();
   const { user, login, logout } = useUserStore();
-  const {
-    startNewGame,
-    loadGame,
-    hasSavedGame,
-    isConnected,
-    serverHealth,
-    checkServerConnection,
-  } = useGameStore();
+  const { startNewGame, hasSavedGame } = useGameStore();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isContinueModalOpen, setIsContinueModalOpen] = useState(false);
 
@@ -37,11 +30,6 @@ export default function Home() {
       });
     }
   }, [user, login]);
-
-  // 컴포넌트 마운트 시 서버 연결 상태 확인
-  React.useEffect(() => {
-    checkServerConnection();
-  }, [checkServerConnection]);
 
   // 깨진 한글 데이터 복구 함수
   const fixKoreanText = (text: string): string => {
@@ -123,26 +111,16 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 서버 연결 상태 표시 */}
-      <div id="text" className="bg-black py-8 text-center">
-        <div
-          className={`inline-block px-6 py-3 rounded-full text-lg font-medium ${
-            serverHealth
-              ? 'bg-green-500 text-white border-2 border-green-300'
-              : 'bg-red-500 text-white border-2 border-red-300'
-          }`}
-        >
-          {serverHealth ? '🟢 백엔드 연결됨' : '🔴 백엔드 연결 안됨'}
-        </div>
-      </div>
-
       {/* 게임 선택 섹션 */}
       <div className="bg-yellow-500 py-16">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 id="title" className="text-4xl font-bold text-black text-center mb-12">
+          <h2
+            id="title"
+            className="text-4xl font-bold text-black text-center mb-12"
+          >
             게임을 선택하세요
           </h2>
-          
+
           <div id="text" className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <button
               onClick={() => setIsModalOpen(true)}
@@ -150,11 +128,15 @@ export default function Home() {
             >
               <div className="text-center">
                 <div className="text-6xl mb-4">🎮</div>
-                <h3 id="text" className="text-2xl font-bold mb-2">새로 시작</h3>
-                <p id="text" className="text-yellow-300">새로운 모험을 시작합니다</p>
+                <h3 id="text" className="text-2xl font-bold mb-2">
+                  새로 시작
+                </h3>
+                <p id="text" className="text-yellow-300">
+                  새로운 모험을 시작합니다
+                </p>
               </div>
             </button>
-            
+
             <button
               id="text"
               onClick={() => {
@@ -168,8 +150,12 @@ export default function Home() {
             >
               <div className="text-center">
                 <div className="text-6xl mb-4">📚</div>
-                <h3 id="text" className="text-2xl font-bold mb-2">이어서 하기</h3>
-                <p id="text" className="text-yellow-300">저장된 게임을 불러옵니다</p>
+                <h3 id="text" className="text-2xl font-bold mb-2">
+                  이어서 하기
+                </h3>
+                <p id="text" className="text-yellow-300">
+                  저장된 게임을 불러옵니다
+                </p>
               </div>
             </button>
           </div>
@@ -198,20 +184,15 @@ export default function Home() {
         buttons={[
           {
             text: '시작하기',
-            onClick: async () => {
-              try {
-                // 백엔드로 사용자 이름과 함께 게임 시작
-                await startNewGame({
-                  tutorial: false,
-                  playerName: getUserName(),
-                  difficulty: 'normal',
-                });
-                setIsModalOpen(false);
-                navigate('/game');
-              } catch (error) {
-                console.error('게임 시작 실패:', error);
-                alert('게임 시작에 실패했습니다. 다시 시도해주세요.');
-              }
+            onClick: () => {
+              // 로컬 게임 시작
+              startNewGame({
+                tutorial: false,
+                playerName: getUserName(),
+                difficulty: 'normal',
+              });
+              setIsModalOpen(false);
+              navigate('/game');
             },
             variant: 'primary',
           },
@@ -229,11 +210,6 @@ export default function Home() {
           <p className="text-gray-600">
             정말로 새로운 모험을 시작하시겠습니까?
           </p>
-          {serverHealth && (
-            <p className="text-green-600 text-sm mt-2">
-              백엔드 서버와 연결되어 있어 게임 진행 상황이 저장됩니다.
-            </p>
-          )}
         </div>
       </Modal>
 
@@ -246,15 +222,9 @@ export default function Home() {
         buttons={[
           {
             text: '불러오기',
-            onClick: async () => {
-              try {
-                await loadGame();
-                setIsContinueModalOpen(false);
-                navigate('/game');
-              } catch (error) {
-                console.error('게임 로드 실패:', error);
-                alert('게임 로드에 실패했습니다. 다시 시도해주세요.');
-              }
+            onClick: () => {
+              alert('로컬 게임에서는 저장 기능을 지원하지 않습니다.');
+              setIsContinueModalOpen(false);
             },
             variant: 'primary',
           },
@@ -270,11 +240,6 @@ export default function Home() {
             저장된 게임을 불러와서 이전 진행 상황을 계속합니다.
           </p>
           <p className="text-gray-600">저장된 게임을 불러오시겠습니까?</p>
-          {!serverHealth && (
-            <p className="text-red-600 text-sm mt-2">
-              백엔드 서버에 연결할 수 없어 저장된 게임을 불러올 수 없습니다.
-            </p>
-          )}
         </div>
       </Modal>
     </div>
